@@ -1,0 +1,47 @@
+a
+    font-weight: 500
+    color: #B9BBB3
+    text-decoration: inherit
+    color: #FF7B72
+    
+    
+.underline-hover-effect
+    display: inline-block
+    position: relative
+    padding-bottom: 0.05rem
+
+.underline-hover-effect::before
+    content: ""
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 0
+    height: 2px
+    background-color: #FF7B72
+    transition: width 0.25s ease-out
+
+.underline-hover-effect:hover::before
+    width: 100%
+
+.highlight
+    color: #FF7B72
+  
+h1
+    font-family: "Source sans pro"
+    font-size: 3.2em
+    line-height: 0.5em
+
+h2
+    font-size: 1.5em
+    font-weight: normal
+    color: #B9BBB3
+
+h3
+    font-size: 1.25em
+    font-weight: normal
+    color: #B9BBB3
+    margin: 0.25em
+
+p
+    font-family: "Source sans pro"
+    color: #B9BBB3

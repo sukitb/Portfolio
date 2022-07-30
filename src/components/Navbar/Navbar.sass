@@ -1,0 +1,63 @@
+.navbar
+  width: 100%
+  height: 60px
+  display: flex
+  align-items: center
+  position: relative
+  padding: 0.5rem 0rem
+
+  span
+    font-size: 1.5em
+
+.navbar-menu
+  ul
+    font-size: 1em
+    display: flex
+  li
+    margin: 0rem 1rem
+    list-style: none
+
+.hamburger
+  color: #B9BBB3
+  border: 0
+  height: 40px
+  width: 40px
+  padding: 0.5rem
+  border-radius: 50%
+  background-color: transparent
+  cursor: pointer
+  transition: background-color 0.2s ease-in-out
+  display: none
+
+  :hover
+    color: #FF7B72
+
+@media screen and (max-width: 768px) 
+  .hamburger 
+    display: block
+    
+  .navbar-menu
+    ul
+      display: none
+      position: absolute
+      top: 60px
+      left: 0px
+      width: 100%
+      height: calc(100vh - 77px)
+      text-align: center
+      font-size: 1.25em
+      line-height: 3em
+      
+  
+  .navbar-menu.expanded
+    ul
+      display: block
+
+
+    
+  
+
+  
+
+    
+  
