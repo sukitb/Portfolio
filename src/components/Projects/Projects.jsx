@@ -1,7 +1,7 @@
 import React from "react";
 import { ProjectCard } from "../ProjectCard/ProjectCard";
 import Jammming from "../../assets/ProjectSS/Jammming/jammming-sukitb.surge 1 (1).png";
-import Colmar from "../../assets/ProjectSS/Colmar-academy/desktop.png"
+import Colmar from "../../assets/ProjectSS/Colmar-academy/desktop.png";
 import { Anchor } from "../Anchor/Anchor";
 
 export function Projects() {
@@ -58,9 +58,9 @@ export function Projects() {
           href: `https://getbootstrap.com/`,
         },
         {
-            tech: `GitHub Pages`,
-            href: `https://docs.github.com/en/pages`,
-          },
+          tech: `GitHub Pages`,
+          href: `https://docs.github.com/en/pages`,
+        },
       ],
       github: `https://github.com/sukitb/colmar-academy`,
       demo: `https://sukitb.github.io/colmar-academy/`,
@@ -69,7 +69,8 @@ export function Projects() {
 
   return (
     <div className="Projects">
-        <h2 className="highlight">PROJECTS</h2>
+      <h2 className="highlight">PROJECTS</h2>
+      <hr/>
       {projectsData.map(({ img, title, content, techlist, github, demo }) => (
         <ProjectCard
           img={img}

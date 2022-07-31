@@ -1,13 +1,15 @@
 import React from "react";
 import { Anchor } from "../Anchor/Anchor";
+import { Skills } from "../Skills/Skills";
 import './Profile.sass'
-import TypeAnimation from "react-type-animation";
+
 
 export function Profile() {
     
     return (
         <div className='Profile'>
             <h2 class="highlight">PROFILE</h2>
+            <hr/>
             <h1>Sukit Bunsiri</h1>
             <h2 >I'm a <span style={{color: "#F7C600"}}>WEB DEVELOPER</span></h2>
             <p>Before I started coding I was a teaching fellow for 2 years at <Anchor text="Teach For Thailand" href="https://www.teachforthailand.org/" /> where I realized my passion is solving problems for people. <br /><br />
@@ -16,6 +18,9 @@ export function Profile() {
             , where I learned a lot of technical skills and how to work with others by using agile. <br /><br />
 
             Nowadays I’m still fully passionate about developing my technical skills and soft skills every day. I wish I can use creativity to deliver something that is valuable for your organization in the future.</p>
+            
+            <Skills />
         </div>
+        
     )
 }

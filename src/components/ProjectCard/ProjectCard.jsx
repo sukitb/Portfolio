@@ -1,10 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Github } from "@icons-pack/react-simple-icons";
 import { VscGithub } from "react-icons/vsc";
-import { ExternalLinkIcon } from "@heroicons/react/solid";
 import { HiOutlineExternalLink } from "react-icons/hi";
-
 import "../../global.sass";
 
 export function ProjectCard(props) {
@@ -42,7 +39,21 @@ export function ProjectCard(props) {
   `;
 
   const Title = styled.h3`
-    font-weight: bold;
+    & a {
+      font-weight: bold;
+      color: #b9bbb3;
+      box-shadow: inset 0 0 0 0 #ff7b72;
+      
+      margin: 0 -.25rem;
+      padding: 0 .25rem;
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      
+      &:hover {
+        color: #1b2027;
+        box-shadow: inset 200px 0 0 0 #ff7b72;
+        
+      }
+    }
   `;
 
   const Content = styled.p`
@@ -69,12 +80,15 @@ export function ProjectCard(props) {
     width: 30px;
     height: 30px;
     fill: #b9bbb3;
+    padding: 0px 5px;
 
     &:hover {
       fill: #ff7b72;
     }
 
-    padding: 0px 5px;
+    @media only screen and (max-width: 768px) {
+      
+    }
   `;
   const StyledExternalLinkIcon = styled(HiOutlineExternalLink)`
     width: 30px;
@@ -90,7 +104,7 @@ export function ProjectCard(props) {
   return (
     <ProjectCard>
       <ProjectDetail>
-        <Title>{props.title}</Title>
+        <Title><a href={props.demo} target="_blank">{props.title}</a></Title>
         <Content>{props.content}</Content>
         <TechList>
           {props.techlist.map(({ tech, href }) => (

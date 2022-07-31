@@ -34,7 +34,7 @@ export function Experiences() {
   const educationData = [
     {
       img: Gen,
-      title: `Learner`,
+      title: `Fullstack Web Developer Learner`,
       place: `Generation Thailand`,
       time: `May - August 2022`,
       content: [
@@ -59,9 +59,10 @@ export function Experiences() {
   return (
     <div className="Experiences">
       <h2 className="highlight">EXPERIENCES</h2>
+      <hr />
       <div className="jobData">
         <div>
-          <h3>My previous responsibilities</h3>
+          <h2>My previous responsibilities</h2>
           {jobData.map(({ img, title, place, time, content }) => (
             <Accordion
               img={img}
@@ -74,7 +75,7 @@ export function Experiences() {
         </div>
       </div>
       <div className="educationData">
-        <h3>I learned from</h3>
+        <h2>I learned from</h2>
         {educationData.map(({ img, place, title, time, content }) => (
           <Accordion
             img={img}

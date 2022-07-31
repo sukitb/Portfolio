@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar/Navbar'
 import { Profile } from './components/Profile/Profile'
 import { Experiences } from './components/Experiences/Experiences'
 import { Projects } from './components/Projects/Projects'
+import { Skills } from './components/Skills/Skills'
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       {/* Sidebar */}
       <Profile />
+      
       <Experiences />
       <Projects />
       {/* Contact */}
