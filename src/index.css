@@ -1,6 +1,6 @@
 :root {
   font-family: 'Ubuntu Mono', Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
   /* font-weight: 400; */
 
@@ -17,7 +17,8 @@
 
 body {
   width: 100%;
-  max-width: 1600px;
-  padding: 250px;
+  max-width: 1000px;
+  padding: 0 250px;
+  margin: 0 auto;
 }
 
