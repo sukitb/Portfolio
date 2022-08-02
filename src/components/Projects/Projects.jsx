@@ -2,11 +2,9 @@ import React from "react";
 import { ProjectCard } from "../ProjectCard/ProjectCard";
 import Jammming from "../../assets/ProjectSS/Jammming/jammming-sukitb.surge 1 (1).png";
 import Colmar from "../../assets/ProjectSS/Colmar-academy/desktop.png";
-import { Anchor } from "../Anchor/Anchor";
+import styled from "styled-components";
 
 export function Projects() {
-  [];
-
   const projectsData = [
     {
       img: Jammming,
@@ -67,10 +65,23 @@ export function Projects() {
     },
   ];
 
+  const Projects = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+
+    @media screen and (max-width: 768px) {
+        padding: 0px;
+        display: block;
+        height: auto;
+      }
+  `;
+
   return (
-    <div className="Projects">
+    <Projects>
       <h2 className="highlight">PROJECTS</h2>
-      <hr/>
       {projectsData.map(({ img, title, content, techlist, github, demo }) => (
         <ProjectCard
           img={img}
@@ -81,6 +92,6 @@ export function Projects() {
           demo={demo}
         />
       ))}
-    </div>
+    </Projects>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Anchor } from "../Anchor/Anchor";
 import styled from "styled-components";
-import "./Accordion.sass";
+
 
 export function Accordion(props) {
   const [isActive, setIsActive] = useState(false);
@@ -17,6 +17,7 @@ export function Accordion(props) {
     margin: 50px 0px;
     @media screen and (max-width: 768px) {
       display: block;
+      margin: 0px 0px 50px 0px;
     }
   `;
 
@@ -28,9 +29,11 @@ export function Accordion(props) {
     @media screen and (max-width: 768px) {
        display: flex;
        justify-content: center;
-       margin: 40px;
+       margin: 20px 0px;
+       & img {
+        margin: 0px;
     }
-
+  }
   `;
 
   const Wrapper = styled.div`
@@ -52,8 +55,22 @@ export function Accordion(props) {
   `;
 
   const Description = styled.div`
+    &.mobile{
+      display: none;
+    }
+
     & li {
       line-height: 1.5em;
+    }
+
+    @media screen and (max-width: 768px) {
+      & .mobile{
+        display: block;
+      }
+
+      & .desktop{
+        display: none;
+      }
     }
   `;
 
@@ -79,14 +96,14 @@ export function Accordion(props) {
 
     &.mobile {
       margin: 10px 0px;
-      background-color: #FF7B72;
+      background-color: transparent;
       width: 120px;
-      height: 60px;
-      color: white;
+      height: 48px;
+      color: #FF7B72;
       display: none;
-      border-radius: 5px;
-      font-family: "Helvetica";
-      font-size: 0.8em;
+      border: 1px solid #B9BBB3;
+      border-radius: 4px;
+      font-size: 16px;
       font-weight: bold;
     }
 
@@ -113,23 +130,35 @@ export function Accordion(props) {
       <Header>
         <h3>{props.title}</h3>
         <h3>
-          <Anchor text={`@` + props.place} />
+          <Anchor text={`@` + props.place} blank={true} href={props.href} />
         </h3>
+        
       </Header>
 
-      <Description>
-        <Toggle>
-          <h3>{props.time}</h3>
-          <ToggleButton className="desktop" onClick={toggleAccordion}>{!isActive ? `▽` : `△`}</ToggleButton>
+      <Toggle>
+      <h3>{props.time}</h3>
           <ToggleButton className="mobile" onClick={toggleAccordion}>{!isActive ? `more` : `less`}</ToggleButton>
         </Toggle>
-        {isActive && (
+
+      <Description>
+      
+        <div className="mobile">
+        { isActive && (
           <ul>
             {props.content.map((l) => (
               <li>{l}</li>
             ))}
           </ul>
         )}
+        </div>
+        
+        <div className="desktop">
+        <ul>
+        {props.content.map((l) => (
+              <li>{l}</li>
+            ))}
+        </ul>
+        </div>
       </Description>
 
       </Wrapper>

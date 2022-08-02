@@ -6,7 +6,7 @@ export function Anchor(props) {
     return (
         <a className="underline-hover-effect" 
         href={props.href}
-        target="_blank">
+        target={props.blank ? "_blank" : ""}>
             {props.text}</a>
     )
 }

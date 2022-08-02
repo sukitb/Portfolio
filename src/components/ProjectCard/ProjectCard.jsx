@@ -10,8 +10,11 @@ export function ProjectCard(props) {
     list-style: none;
     padding: 0px;
     & li {
-      
       padding: 0px 10px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      flex-wrap: wrap;
     }
   `;
 
@@ -60,9 +63,14 @@ export function ProjectCard(props) {
     line-height: 1.5;
   `;
 
-  const Menu = styled.div``;
+  const Menu = styled.div`
+    @media only screen and (max-width: 768px) {
+      display: flex;
+      margin: 0 auto;
+    }
+  `;
 
-  const Img = styled.div`
+    const Img = styled.div`
     grid-column: 1 / 4;
     grid-row: 1 / 4;
 
@@ -87,7 +95,10 @@ export function ProjectCard(props) {
     }
 
     @media only screen and (max-width: 768px) {
-      
+      width: 75px;
+      height: 75px;
+      padding: 10px;
+      border-radius: 5px;
     }
   `;
   const StyledExternalLinkIcon = styled(HiOutlineExternalLink)`
@@ -98,6 +109,14 @@ export function ProjectCard(props) {
 
     &:hover {
       color: #ff7b72;
+    }
+
+    @media only screen and (max-width: 768px) {
+      width: 75px;
+      height: 75px;
+      padding: 10px;
+      
+      border-radius: 5px;
     }
   `;
 

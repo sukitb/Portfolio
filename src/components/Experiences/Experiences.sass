@@ -1,9 +1,9 @@
 .Experiences
     text-align: left
+    
 
     .card
         display: flex
-        
 
     li
         font-family: 'Source sans pro'
@@ -12,7 +12,16 @@
     a
         cursor: pointer
 
+    
 
 @media screen and (max-width: 768px)
-  .card
-    display: block
+    .detail
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        h2, h3
+            text-align: center
+            line-height: 1.25em
+    .card
+        display: block

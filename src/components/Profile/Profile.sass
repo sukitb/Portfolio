@@ -1,6 +1,19 @@
 .Profile
-    text-align: left
+    
+    display: flex
+    flex-direction: column
+    align-content: center
+    justify-content: center
+    
+    height: 100vh
+
+    & .header
+        width: 100%
+        text-align: right
+        border-bottom: 1px solid
 
 @media screen and (max-width: 768px)
     .Profile
         padding: 0px
+        display: block
+        height: auto
