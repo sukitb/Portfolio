@@ -35,9 +35,10 @@ function App() {
     <section id='projects'>
     <Projects />
     </section>
-    <section id='learning'>
+    
+    {/* <section id='learning'>
    <Gallery />
-   </section>
+   </section> */}
 
     <section id='contact'>
     <Contact />
