@@ -100,52 +100,7 @@ export function ProjectCard(props) {
       max-width: 100%;
     }
   `;
-
-  const StyledGithub = styled(VscGithub)`
-    width: 30px;
-    height: 30px;
-    fill: #b9bbb3;
-    padding: 0px 5px;
-
-    &:hover {
-      fill: #ff7b72;
-    }
-
-    @media only screen and (max-width: 768px) {
-      width: 75px;
-      height: 75px;
-      padding: 10px;
-      border-radius: 5px;
-    }
-  `;
-  const StyledExternalLinkIcon = styled(HiOutlineExternalLink)`
-    width: 30px;
-    height: 30px;
-    color: #b9bbb3;
-    padding: 0px 5px;
-
-    &:hover {
-      color: #ff7b72;
-    }
-
-    @media only screen and (max-width: 768px) {
-      width: 75px;
-      height: 75px;
-      padding: 10px;
-      
-      border-radius: 5px;
-    }
-  `;
-
-  const StyledButton = styled(Button)`
-      a {
-      margin: 0px 30px;
-      }
-      @media only screen and (max-width: 768px) {
-        
-      
-    }
-  `
+  
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -191,8 +146,8 @@ const item = {
           ))}
         </TechList>
         <Menu>
-          <StyledButton text="REPO" icon={<><VscGithub/></>} href={props.github} blank={true} />
-          <StyledButton text="DEMO" icon={<><HiOutlineExternalLink/></>} href={props.demo} blank={true} />
+          <Button text="REPO" icon={<><VscGithub/></>} href={props.github} blank={true} />
+          <Button text="DEMO" icon={<><HiOutlineExternalLink/></>} href={props.demo} blank={true} />
         </Menu>
         </motion.div>
         </motion.div>

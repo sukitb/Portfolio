@@ -62,7 +62,7 @@ export const Gallery = () => {
         <h3><i>-John Dryden</i></h3>
       </Quote>
       <div style={{width: "200"}}>
-      <Carousel cols={2} rows={1} gap={5} dot>
+      <Carousel cols={2} rows={1} gap={5} >
         <Carousel.Item>
           <a href=""><img width="100%" src={ReactJS} /></a>
         </Carousel.Item>
