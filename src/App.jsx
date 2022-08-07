@@ -17,16 +17,16 @@ function App() {
   return (
     <div className='App'>
 
-      {/* <Navbar /> */}
+      <Navbar />
 
       
     
-    {/* <Navbar /> */}
     
     
-    {/* <section id='profile'>
+    
+    <section id='profile'>
     <Profile />
-    </section> */}
+    </section>
     
     <section id='experiences'>
     <Experiences  />
@@ -37,9 +37,9 @@ function App() {
     </section>
 
 
-    {/* <section id='contact'>
+    <section id='contact'>
     <Contact />
-    </section> */}
+    </section>
 
     
 

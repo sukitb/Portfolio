@@ -35,10 +35,6 @@ function Navbar() {
       href: `#projects`,
     },
     {
-      text: `LEARNING`,
-      href: `#learning`,
-    },
-    {
       text: `CONTACT`,
       href: `#contact`,
     },
@@ -53,7 +49,7 @@ function Navbar() {
               setExtendNavbar((curr) => !curr);
             }}
           >
-            {extendNavbar ? <>menu</> : <>close</>}
+            {extendNavbar ? <>&#10005;</> : <>&#8801;</>}
           </OpenLinksButton>
           <NavbarLinkContainer>
             {navbarList.map(({ text, href }) => (
