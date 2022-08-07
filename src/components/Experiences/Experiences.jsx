@@ -6,6 +6,7 @@ import Glico from "../../assets/Jobs/Glico_logo.svg";
 import TU from "../../assets/Jobs/logo-new-white.png";
 import Gen from "../../assets/Jobs/Generation.svg";
 import { Accordion } from "../Accordion/Accordion";
+import { motion } from "framer-motion"
 
 export function Experiences() {
   const jobData = [
@@ -62,7 +63,7 @@ export function Experiences() {
   ];
 
   const Experiences = styled.div`
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -83,18 +84,50 @@ export function Experiences() {
 
   `
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.1,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { x: -20, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    
+    transition: {
+      type: "tween",
+    }
+  },
+};
+
   return (
     <Experiences>
       
       <Header>
-      <h2 className="highlight">EXPERIENCES</h2>
+      <h2 className="red">EXPERIENCE</h2>
       </Header>
-
-      <div className="jobData detail">
-        <h3>
-          My previous <span className="highlight">responsibilities</span>
-        </h3>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        >
+      
+        <motion.h3 variants={item}>
+          <span className="highlight">Responsibility</span>
+        </motion.h3>
+       
+          
         {jobData.map(({ img, title, place, time, content, href }) => (
+          <motion.div
+          variants={item}>
           <Accordion
             img={img}
             place={place}
@@ -103,22 +136,27 @@ export function Experiences() {
             content={content}
             href={href}
           />
+          </motion.div>
         ))}
-      </div>
-      <div className="educationData detail">
-        <h3>
-          I <span className="highlight">learned</span> from
-        </h3>
-        {educationData.map(({ img, place, title, time, content }) => (
+        <motion.h3 variants={item}>
+          <span className="highlight">Education</span>
+          </motion.h3>
+        {educationData.map(({ img, place, title, time, content, href }) => (
+          <motion.div
+          variants={item}>
           <Accordion
             img={img}
             title={title}
             place={place}
             time={time}
             content={content}
+            href={href}
+            
           />
+          </motion.div>
         ))}
-      </div>
+        </motion.div>
+      
     </Experiences>
   );
 }

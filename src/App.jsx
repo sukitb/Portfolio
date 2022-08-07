@@ -1,12 +1,14 @@
 import { Profiler, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import { Navbar } from './components/Navbar/Navbar'
 import { Profile } from './components/Profile/Profile'
 import { Experiences } from './components/Experiences/Experiences'
 import { Projects } from './components/Projects/Projects'
 import { Skills } from './components/Skills/Skills'
 import { Contact } from './components/Contact/Contact'
+import { Gallery } from './components/Gallery/Gallery'
+import Navbar from './components/Navbar/Nav'
+
 
 
 
@@ -14,9 +16,14 @@ function App() {
   
   return (
     <div className='App'>
-    
-    <Navbar />
 
+      <Navbar />
+
+      
+    
+    {/* <Navbar /> */}
+    
+    
     <section id='profile'>
     <Profile />
     </section>
@@ -28,12 +35,15 @@ function App() {
     <section id='projects'>
     <Projects />
     </section>
-
-   
+    <section id='learning'>
+   <Gallery />
+   </section>
 
     <section id='contact'>
     <Contact />
     </section>
+
+    
 
     </div>
   )

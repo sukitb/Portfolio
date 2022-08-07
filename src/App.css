@@ -1,2 +1,15 @@
+.App {
+    display: block;
+}
 
+section {
+    margin: 200px 0px;
+    padding: 100px 0px;
+}
 
+@media screen and (max-width: 768px){
+    section {
+        margin: 0px 0px;
+        padding: 0px;
+    }
+}

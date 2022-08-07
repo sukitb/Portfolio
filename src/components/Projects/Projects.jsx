@@ -70,18 +70,29 @@ export function Projects() {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    height: 100vh;
+    height: auto;
 
     @media screen and (max-width: 768px) {
-        padding: 0px;
-        display: block;
-        height: auto;
-      }
+      padding: 0px;
+      display: block;
+      height: auto;
+    }
   `;
+
+  const Header = styled.div`
+    width: 100%;
+    text-align: right;
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+  `;
+
+
 
   return (
     <Projects>
-      <h2 className="highlight">PROJECTS</h2>
+      <Header>
+      <h2 className="red">PROJECTS</h2>
+      </Header>
       {projectsData.map(({ img, title, content, techlist, github, demo }) => (
         <ProjectCard
           img={img}

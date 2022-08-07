@@ -23,8 +23,29 @@ a
 .underline-hover-effect:hover::before
     width: 100%
 
+.underline-hover-effect-y
+    display: inline-block
+    position: relative
+    padding-bottom: 0.05rem
+
+.underline-hover-effect-y::before
+    content: ""
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 0
+    height: 2px
+    background-color: #F7C600
+    transition: width 0.25s ease-out
+
+.underline-hover-effect-y:hover::before
+    width: 100%
+
 .highlight
     color: #F7C600
+
+.red
+    color: #FF7B72
   
 h1
     font-family: "Source sans pro"

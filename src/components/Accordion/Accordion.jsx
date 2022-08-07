@@ -99,10 +99,9 @@ export function Accordion(props) {
       background-color: transparent;
       width: 120px;
       height: 48px;
-      color: #FF7B72;
+      color: white;
       display: none;
       border: 1px solid #B9BBB3;
-      border-radius: 4px;
       font-size: 16px;
       font-weight: bold;
     }
@@ -137,7 +136,7 @@ export function Accordion(props) {
 
       <Toggle>
       <h3>{props.time}</h3>
-          <ToggleButton className="mobile" onClick={toggleAccordion}>{!isActive ? `more` : `less`}</ToggleButton>
+          <ToggleButton className="mobile" onClick={toggleAccordion}>{!isActive ? `MORE` : `LESS`}</ToggleButton>
         </Toggle>
 
       <Description>

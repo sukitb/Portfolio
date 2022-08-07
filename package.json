@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.26",
+    "better-react-carousel": "^1.1.1",
     "bootstrap": "^5.2.0",
+    "framer-motion": "^7.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
@@ -24,6 +26,7 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
+    "babel-plugin-styled-components": "^2.0.7",
     "vite": "^3.0.0"
   }
 }

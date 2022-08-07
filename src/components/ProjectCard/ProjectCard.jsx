@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { VscGithub } from "react-icons/vsc";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import "../../global.sass";
+import { Button } from "../Button/Button";
+import { motion } from "framer-motion";
 
 export function ProjectCard(props) {
   const TechList = styled.ul`
@@ -64,9 +66,24 @@ export function ProjectCard(props) {
   `;
 
   const Menu = styled.div`
+  
+    display: flex;
+    
+    a {
+      
+      margin: 10px 30px;
+    }
+
     @media only screen and (max-width: 768px) {
       display: flex;
-      margin: 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      a {
+      height: 70px;
+      margin: 10px 30px;
+    }
     }
   `;
 
@@ -120,10 +137,53 @@ export function ProjectCard(props) {
     }
   `;
 
+  const StyledButton = styled(Button)`
+      a {
+      margin: 0px 30px;
+      }
+      @media only screen and (max-width: 768px) {
+        
+      
+    }
+  `
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { x: -20, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    
+    transition: {
+      type: "tween",
+    }
+  },
+};
+
   return (
     <ProjectCard>
+      
       <ProjectDetail>
-        <Title><a href={props.demo} target="_blank">{props.title}</a></Title>
+      <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          
+        >
+          
+        <Title><motion.a variants={item} href={props.demo} target="_blank">{props.title}</motion.a></Title>
+        <motion.div variants={item}>
         <Content>{props.content}</Content>
         <TechList>
           {props.techlist.map(({ tech, href }) => (
@@ -131,17 +191,25 @@ export function ProjectCard(props) {
           ))}
         </TechList>
         <Menu>
-          <a href={props.github} target="_blank">
-            <StyledGithub />
-          </a>
-          <a href={props.demo} target="_blank">
-            <StyledExternalLinkIcon />
-          </a>
+          <StyledButton text="REPO" icon={<><VscGithub/></>} href={props.github} blank={true} />
+          <StyledButton text="DEMO" icon={<><HiOutlineExternalLink/></>} href={props.demo} blank={true} />
         </Menu>
+        </motion.div>
+        </motion.div>
       </ProjectDetail>
+      
+      
       <Img>
-        <img src={props.img}></img>
+      <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          
+        >
+        <motion.img variants={item} src={props.img}></motion.img>
+        </motion.div>
       </Img>
+      
     </ProjectCard>
   );
 }

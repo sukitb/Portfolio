@@ -3,29 +3,51 @@ import { Anchor } from "../Anchor/Anchor";
 import { Skills } from "../Skills/Skills";
 import "./Profile.sass";
 import TypeAnimation from "react-type-animation";
+import styled from "styled-components";
+import { Button } from "../Button/Button";
+import { motion } from "framer-motion";
+import { IoDocumentTextSharp } from "react-icons/io5";
 
 export function Profile() {
+
+
   return (
+    
     <div className="Profile">
+      
       <div className="header">
-        <h2 class="highlight">PROFILE</h2>
+        <h2 class="red">ABOUT</h2>
       </div>
-      
+      <motion.div
+      viewport={{once:true, amount:0.1}}
+      initial={{ x:-300, opacity:0}}
+      animate={{ opacity: 1 , x:0}}
+      transition={{
+          type:"Tween",
+          duration:1,
+      }}
+    >
         <h1>Sukit Bunsiri</h1>
+        </motion.div>
+        
+        
+
         <div style={{ width: '100%' }}>
-        <TypeAnimation
-          cursor={true}
-          sequence={[
-            `I'm a Lawyer`,
-            300,
-            `I'm a Teacher`,
-            300,
-            `I'm a WEB DEVELOPER`,
-          ]}
-          wrapper="h2"
-        />
+        <h2>I'm Web Developer</h2>
+        
         </div>
-      
+
+        <motion.div
+      viewport={{once:true, amount:0.1}}
+      initial={{ x:300, opacity:0}}
+      animate={{ opacity: 1 , x:0}}
+      transition={{
+          type:"Tween",
+          duration:1,
+          delay:0.5
+      }}
+    >
+      <div className="content">
       <p>
         Before I started coding I was a teaching fellow for 2 years at{" "}
         <Anchor
@@ -49,8 +71,28 @@ export function Profile() {
         and soft skills every day. I wish I can use creativity to deliver
         something that is valuable for your organization in the future.
       </p>
+      </div>
+      </motion.div>
+      
+      <motion.div
+      viewport={{once:false, amount:0.1}}
+      initial={{ x:-300, opacity:0}}
+      whileInView={{ opacity: 1 , x:0}}
+      transition={{
+          type:"Tween",
+          duration:1,
+          delay:0
+      }}
+    >
+      <Button icon={<IoDocumentTextSharp />} text="RESUME" href="https://stackoverflow.com/questions/8762201/how-to-get-the-cursor-to-change-to-the-hand-when-hovering-a-button-tag" />
+      </motion.div>
+      
 
       <Skills />
+    
+      
+      
+      
     </div>
   );
 }
