@@ -85,7 +85,7 @@ export function Contact() {
         margin: 10px 30px;
 
         div {
-          display:none ;
+          display: none;
         }
       }
     }
