@@ -121,6 +121,7 @@ export function Contact() {
           {iconList.map(({ icon, link, text }) => (
             <motion.div className="ButtonAnimation" variants={item}>
               <Button
+                ket={text}
                 id={text}
                 icon={icon}
                 text={text}

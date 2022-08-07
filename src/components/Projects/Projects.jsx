@@ -95,6 +95,7 @@ export function Projects() {
       </Header>
       {projectsData.map(({ img, title, content, techlist, github, demo }) => (
         <ProjectCard
+          key={title}
           img={img}
           title={title}
           content={content}

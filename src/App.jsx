@@ -17,7 +17,7 @@ function App() {
   return (
     <div className='App'>
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       
     
@@ -28,21 +28,21 @@ function App() {
     <Profile />
     </section>
     
-    <section id='experiences'>
+    {/* <section id='experiences'>
     <Experiences  />
-    </section>
+    </section> */}
 
-    <section id='projects'>
+    {/* <section id='projects'>
     <Projects />
-    </section>
-    
+    </section> */}
+
     {/* <section id='learning'>
    <Gallery />
    </section> */}
 
-    <section id='contact'>
+    {/* <section id='contact'>
     <Contact />
-    </section>
+    </section> */}
 
     
 

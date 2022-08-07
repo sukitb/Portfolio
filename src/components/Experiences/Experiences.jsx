@@ -129,6 +129,7 @@ const item = {
           <motion.div
           variants={item}>
           <Accordion
+          key={title}
             img={img}
             place={place}
             title={title}
@@ -145,6 +146,7 @@ const item = {
           <motion.div
           variants={item}>
           <Accordion
+          key={title}
             img={img}
             title={title}
             place={place}

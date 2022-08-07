@@ -106,17 +106,3 @@ export function Skills() {
   );
 }
 
-{
-  /* <SiHtml5 fill="#E34F26" />
-          <SiCss3 fill="#1572B6" />
-          <SiJavascript fill="#F7DF1E" />
-          <SiReact fill="#61DAFB" />
-          <SiBootstrap fill="#7952B3" />
-          <SiNodedotjs fill="#339933" />
-          <SiExpress fill="#E6E7E4" />
-          <SiMarkdown fill="#E6E7E4" />
-          <SiVisualstudiocode fill="#007ACC" />
-          <SiGit fill="#F05032" />
-          <SiGithub fill="#E6E7E4" />
-          <SiFigma fill="#F24E1E" /> */
-}
