@@ -9,15 +9,6 @@ import { IoDocumentTextSharp } from "react-icons/io5";
 import { Button } from "../Button/Button";
 import { motion } from "framer-motion";
 
-function FadeInWhenVisible({ children }) {
-  return (
-    <motion.div
-    viewport={{ once: false }}
-      >
-      {children}
-    </motion.div>
-  )
-}
 
 export function Contact() {
   const iconList = [

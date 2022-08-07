@@ -53,7 +53,7 @@ function Navbar() {
               setExtendNavbar((curr) => !curr);
             }}
           >
-            {extendNavbar ? <>&#10005;</> : <> &#8801;</>}
+            {extendNavbar ? <>menu</> : <>close</>}
           </OpenLinksButton>
           <NavbarLinkContainer>
             {navbarList.map(({ text, href }) => (

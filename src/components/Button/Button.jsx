@@ -51,7 +51,7 @@ export function Button(props) {
     grid-row: 2/4;
     width: 100%;
 
-    /* background-color: #3f52a0; */
+   
     background-color: #ff7b72;
 
     @media only screen and (max-width: 768px) {
