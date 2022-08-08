@@ -90,14 +90,15 @@ const container = {
     opacity: 1,
     scale: 1,
     transition: {
-      delayChildren: 0.1,
+      type: "tween",
+      delayChildren: 0.3,
       staggerChildren: 0.2,
     },
   },
 };
 
 const item = {
-  hidden: { x: -20, opacity: 0 },
+  hidden: { x: -20, opacity: 0.5 },
   visible: {
     x: 0,
     opacity: 1,
@@ -120,9 +121,9 @@ const item = {
         whileInView="visible"
         >
       
-        <motion.h3 variants={item}>
+        
           <span className="highlight">Responsibility</span>
-        </motion.h3>
+        
        
           
         {jobData.map(({ img, title, place, time, content, href }) => (
@@ -139,9 +140,9 @@ const item = {
           />
           </motion.div>
         ))}
-        <motion.h3 variants={item}>
+        
           <span className="highlight">Education</span>
-          </motion.h3>
+          
         {educationData.map(({ img, place, title, time, content, href }) => (
           <motion.div
           variants={item}>

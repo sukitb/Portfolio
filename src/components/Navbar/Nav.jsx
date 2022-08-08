@@ -27,12 +27,12 @@ function Navbar() {
       href: `#profile`,
     },
     {
-      text: `EXPERIENCE`,
-      href: `#experiences`,
-    },
-    {
       text: `PROJECTS`,
       href: `#projects`,
+    },
+    {
+      text: `EXPERIENCE`,
+      href: `#experiences`,
     },
     {
       text: `CONTACT`,
@@ -53,7 +53,7 @@ function Navbar() {
           </OpenLinksButton>
           <NavbarLinkContainer>
             {navbarList.map(({ text, href }) => (
-              <Button text={text} href={href} />
+              <Button key={text} text={text} href={href} />
             ))}
           </NavbarLinkContainer>
         </LeftContainer>
@@ -63,6 +63,7 @@ function Navbar() {
           <NavbarExtendedContainer>
             {navbarList.map(({ text, href }) => (
               <Button
+                key={text}
                 text={text}
                 href={href}
                 onClick={() => {

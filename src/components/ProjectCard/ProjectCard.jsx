@@ -100,7 +100,7 @@ export function ProjectCard(props) {
       max-width: 100%;
     }
   `;
-  
+
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -126,6 +126,8 @@ const item = {
   },
 };
 
+
+
   return (
     <ProjectCard>
       
@@ -146,8 +148,10 @@ const item = {
           ))}
         </TechList>
         <Menu>
+          
           <Button text="REPO" icon={<><VscGithub/></>} href={props.github} blank={true} />
           <Button text="DEMO" icon={<><HiOutlineExternalLink/></>} href={props.demo} blank={true} />
+          
         </Menu>
         </motion.div>
         </motion.div>

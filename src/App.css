@@ -3,8 +3,9 @@
 }
 
 section {
-    margin: 200px 0px;
-    padding: 100px 0px;
+    margin: 0px 0px;
+    padding-bottom: 100px;
+    padding-top: 125px;
 }
 
 @media screen and (max-width: 768px){

@@ -19,22 +19,22 @@ function App() {
 
       <Navbar />
 
-      
-    
-    
-    
-    
-    <section id='profile'>
+      <section id='profile'>
     <Profile />
     </section>
+    
+      <section id='projects'>
+    <Projects />
+    </section>
+    
+    
+
     
     <section id='experiences'>
     <Experiences  />
     </section>
 
-    <section id='projects'>
-    <Projects />
-    </section>
+
 
 
     <section id='contact'>

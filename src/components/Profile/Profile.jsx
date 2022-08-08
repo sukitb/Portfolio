@@ -84,7 +84,7 @@ export function Profile() {
           delay:0
       }}
     >
-      <Button icon={<IoDocumentTextSharp />} text="RESUME" href="https://stackoverflow.com/questions/8762201/how-to-get-the-cursor-to-change-to-the-hand-when-hovering-a-button-tag" />
+      <Button icon={<IoDocumentTextSharp />} blank={true} text="RESUME" href="https://drive.google.com/file/d/1P4QK4gHL5--Kjf0QyGF2Ft5g4OHTJUxU/view?usp=sharing" />
       </motion.div>
       
 

@@ -11,7 +11,7 @@ export const NavbarContainer = styled.nav`
   
   z-index: 4;
 
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
   @media (min-width: 700px) {
     height: 10px;

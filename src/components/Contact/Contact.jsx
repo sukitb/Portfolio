@@ -15,7 +15,7 @@ export function Contact() {
     {
       text: `Resume`,
       icon: <IoDocumentTextSharp />,
-      link: `https://www.linkedin.com/in/sukit-bunsiri`,
+      link: `https://drive.google.com/file/d/1P4QK4gHL5--Kjf0QyGF2Ft5g4OHTJUxU/view?usp=sharing`,
     },
     {
       text: `Email`,
@@ -95,13 +95,14 @@ export function Contact() {
   };
 
   const item = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0.5 },
     visible: {
       y: 0,
       opacity: 1,
 
       transition: {
         type: "tween",
+        
       },
     },
   };
