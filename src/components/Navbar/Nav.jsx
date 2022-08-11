@@ -11,9 +11,9 @@ import {
   OpenLinksButton,
   NavbarLinkExtended,
 } from "./Navbar.style";
-import LogoImg from "../../assets/Icon/S.svg";
 
-import styled from "styled-components";
+
+
 import { Button } from "../Button/Button";
 
 import { motion } from "framer-motion";
