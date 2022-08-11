@@ -84,7 +84,7 @@ export function Profile() {
           delay:0
       }}
     >
-      <Button icon={<IoDocumentTextSharp />} blank={true} text="RESUME" href="https://drive.google.com/file/d/1P4QK4gHL5--Kjf0QyGF2Ft5g4OHTJUxU/view?usp=sharing" />
+      <Button icon={<IoDocumentTextSharp />} blank={true} text="RESUME" href="https://drive.google.com/file/d/1z9ccyoYtml5n97zwnYj5fV7tPhgWeJJd/view?usp=sharing" />
       </motion.div>
       
 
