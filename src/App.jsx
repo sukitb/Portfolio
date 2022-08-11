@@ -9,9 +9,6 @@ import { Contact } from './components/Contact/Contact'
 
 import Navbar from './components/Navbar/Nav'
 
-
-
-
 function App() {
   
   return (
