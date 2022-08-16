@@ -13,10 +13,11 @@ export function Profile() {
   const ProfilePic = styled.img`
     width: 400px;
     margin: 20px;
+    
     @media screen and (max-width: 768px) {
       
-    max-width: 300px;
-      
+    max-width: 250px;
+    margin: 10px auto;
       
     }
   `;
