@@ -6,7 +6,8 @@ import Glico from "../../assets/Jobs/Glico_logo.svg";
 import TU from "../../assets/Jobs/logo-new-white.png";
 import Gen from "../../assets/Jobs/Generation.svg";
 import { Accordion } from "../Accordion/Accordion";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { Gallery } from "../Gallery/Gallery";
 
 export function Experiences() {
   const jobData = [
@@ -27,7 +28,7 @@ export function Experiences() {
       title: `General Relation Officer`,
       place: `ThaiGlico`,
       time: `2017`,
-      href: `https://www.glico.com/th/en/` ,
+      href: `https://www.glico.com/th/en/`,
       content: [
         `Managing relationship between employer and labor union.`,
         `Review factory legal contract.`,
@@ -69,11 +70,11 @@ export function Experiences() {
     align-content: center;
     justify-content: center;
 
-      @media screen and (max-width: 768px) {
-        padding: 0px;
-        display: block;
-        height: auto;
-      }
+    @media screen and (max-width: 768px) {
+      padding: 0px;
+      display: block;
+      height: auto;
+    }
   `;
 
   const Header = styled.div`
@@ -81,85 +82,77 @@ export function Experiences() {
     text-align: right;
     border-bottom: 1px solid;
     margin-bottom: 20px;
+  `;
 
-  `
-
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "tween",
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "tween",
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
     },
-  },
-};
+  };
 
-const item = {
-  hidden: { x: -20, opacity: 0.5 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    
-    transition: {
-      type: "tween",
-    }
-  },
-};
+  const item = {
+    hidden: { x: -20, opacity: 0.5 },
+    visible: {
+      x: 0,
+      opacity: 1,
+
+      transition: {
+        type: "tween",
+      },
+    },
+  };
 
   return (
     <Experiences>
-      
       <Header>
-      <h2 className="red">EXPERIENCE</h2>
+        <h2 className="red">EXPERIENCE</h2>
       </Header>
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        >
-      
-        
-          <span className="highlight">Responsibility</span>
-        
-       
-          
+      <motion.div variants={container} initial="hidden" whileInView="visible">
+        <span className="highlight">Responsibility</span>
+
         {jobData.map(({ img, title, place, time, content, href }) => (
-          <motion.div
-          variants={item}>
-          <Accordion
-          key={title}
-            img={img}
-            place={place}
-            title={title}
-            time={time}
-            content={content}
-            href={href}
-          />
+          <motion.div variants={item}>
+            <Accordion
+              key={title}
+              img={img}
+              place={place}
+              title={title}
+              time={time}
+              content={content}
+              href={href}
+            />
           </motion.div>
         ))}
-        
-          <span className="highlight">Education</span>
-          
+
+        <span className="highlight">Education</span>
+
         {educationData.map(({ img, place, title, time, content, href }) => (
-          <motion.div
-          variants={item}>
-          <Accordion
-          key={title}
-            img={img}
-            title={title}
-            place={place}
-            time={time}
-            content={content}
-            href={href}
-            
-          />
+          <motion.div variants={item}>
+            <Accordion
+              key={title}
+              img={img}
+              title={title}
+              place={place}
+              time={time}
+              content={content}
+              href={href}
+            />
           </motion.div>
         ))}
+
+        <span className="highlight">Certificates</span>
+
+        <motion.div variants={item}>
+          <Gallery />
         </motion.div>
-      
+      </motion.div>
     </Experiences>
   );
 }
