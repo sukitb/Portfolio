@@ -34,7 +34,7 @@ export function Profile() {
       display: block;
       
       div {
-      padding-left: 20px;
+      
     }
     }
   `
@@ -43,7 +43,7 @@ export function Profile() {
 
   @media screen and (max-width: 768px) {
     
-   padding-left: 20px;
+   
       
       
     }
