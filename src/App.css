@@ -8,7 +8,7 @@ section {
     padding-top: 125px;
 }
 
-#profile, #contact {
+#profile {
     height: 100vh;
     display: flex;
     align-items: center;
