@@ -19,7 +19,7 @@ return (
     {Images.map((item) => (
       <img
         draggable="false"
-        src={`src/components/Gallery/Certificates/${item}.jpg`}
+        src={`src/assets/Certificates/${item}.jpg`}
         key={item}
         width="100%"
         alt=""
