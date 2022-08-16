@@ -71,9 +71,10 @@ export function Contact() {
     }
       a {
         font-size: 24px;
-        width: 400px;
+        min-width: 250px;
+        
         height: 100px;
-        margin: 10px 30px;
+        margin: 10px 10px;
 
         div {
           display: none;
@@ -117,7 +118,7 @@ export function Contact() {
           variants={ButtonContainer}
           initial="hidden"
           whileInView="visible"
-          
+          viewport={{ once: true }}
         >
           {iconList.map(({ icon, link, text }) => (
             <motion.div className="ButtonAnimation" variants={item}>

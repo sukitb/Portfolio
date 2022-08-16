@@ -8,6 +8,7 @@ import { Skills } from './components/Skills/Skills'
 import { Contact } from './components/Contact/Contact'
 
 import Navbar from './components/Navbar/Nav'
+import { Gallery } from './components/Gallery/Gallery'
 
 function App() {
   
@@ -37,8 +38,6 @@ function App() {
     <section id='contact'>
     <Contact />
     </section>
-
-    
 
     </div>
   )

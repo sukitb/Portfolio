@@ -108,8 +108,8 @@ const container = {
     opacity: 1,
     scale: 1,
     transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.2,
+      delayChildren: 0.2,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -140,7 +140,7 @@ const item = {
         >
           
         <Title><motion.a variants={item} href={props.demo} target="_blank">{props.title}</motion.a></Title>
-        <motion.div variants={item}>
+        <motion.div variants={item} >
         <Content>{props.content}</Content>
         <TechList>
           {props.techlist.map(({ tech, href }) => (
@@ -163,7 +163,7 @@ const item = {
           variants={container}
           initial="hidden"
           whileInView="visible"
-          
+          viewport={{ once: true }}
         >
         <motion.img variants={item} src={props.img}></motion.img>
         </motion.div>
