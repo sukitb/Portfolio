@@ -16,7 +16,7 @@ export function Profile() {
     @media screen and (max-width: 768px) {
       
     max-width: 300px;
-      
+    margin: 0px auto;
       
     }
   `;
