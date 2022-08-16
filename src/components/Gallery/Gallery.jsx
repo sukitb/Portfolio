@@ -8,6 +8,7 @@ export const Gallery = () => {
 
   const Gallery = styled.div`
     max-width: 750px;
+    height: auto;
     display: flex;
     margin: 50px auto;
   `
