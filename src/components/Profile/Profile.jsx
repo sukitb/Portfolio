@@ -31,6 +31,17 @@ export function Profile() {
     }
   `
 
+  const ButtonContainer = styled.div`
+
+  @media screen and (max-width: 768px) {
+    
+   padding-left: 20px;
+      
+      
+    }
+    
+  `
+
   return (
     <div className="Profile">
       <div className="header">
@@ -93,7 +104,7 @@ export function Profile() {
         </div>
       </motion.div>
 
-      <div>
+      <ButtonContainer>
       <motion.div
         viewport={{ once: false, amount: 0.1 }}
         initial={{ x: -300, opacity: 0 }}
@@ -113,7 +124,7 @@ export function Profile() {
         />
         
       </motion.div>
-      </div>
+      </ButtonContainer>
       <Skills />
     </div>
   );

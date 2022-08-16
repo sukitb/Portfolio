@@ -15,15 +15,18 @@ section {
 }
 
 @media screen and (max-width: 768px){
-    section {
-        padding: 125px 0px 100px 0px;
+    .App {
         display: block;
     }
 
-    #profile, #contact {
+    section {
+        margin: 60px 0px 0px 0px;
         
-        justify-content: center;
-        align-items: center;
+    }
+
+    #profile {
+        margin: 100px 0px 200px 0px;
+        
     }
 
 
