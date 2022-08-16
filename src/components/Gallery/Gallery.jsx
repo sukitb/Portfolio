@@ -19,7 +19,7 @@ return (
     {Images.map((item) => (
       <img
         draggable="false"
-        src={`src/assets/Certificates/${item}.jpg`}
+        src={item}
         key={item}
         width="100%"
         alt=""

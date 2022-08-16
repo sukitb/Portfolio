@@ -114,7 +114,7 @@ export function Experiences() {
       <Header>
         <h2 className="red">EXPERIENCE</h2>
       </Header>
-      <motion.div variants={container} initial="hidden" whileInView="visible">
+      <motion.div viewport={{ once: true }} variants={container} initial="hidden" whileInView="visible">
         <span className="highlight">Responsibility</span>
 
         {jobData.map(({ img, title, place, time, content, href }) => (
@@ -134,7 +134,7 @@ export function Experiences() {
         <span className="highlight">Education</span>
 
         {educationData.map(({ img, place, title, time, content, href }) => (
-          <motion.div variants={item}>
+          <motion.div viewport={{ once: true }} variants={item}>
             <Accordion
               key={title}
               img={img}

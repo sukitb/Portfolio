@@ -4,13 +4,27 @@
 
 section {
     margin: 0px 0px;
-    padding-bottom: 100px;
-    padding-top: 125px;
+    padding: 125px 0px;
+}
+
+#profile, #contact {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 768px){
     section {
-        margin: 0px 0px;
-        padding: 0px;
+        padding: 125px 0px 100px 0px;
+        display: block;
     }
+
+    #profile, #contact {
+        
+        justify-content: center;
+        align-items: center;
+    }
+
+
 }

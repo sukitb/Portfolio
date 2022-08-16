@@ -136,11 +136,11 @@ const item = {
           variants={container}
           initial="hidden"
           whileInView="visible"
-          
+          viewport={{ once: true }}
         >
           
         <Title><motion.a variants={item} href={props.demo} target="_blank">{props.title}</motion.a></Title>
-        <motion.div variants={item}>
+        <motion.div variants={item} >
         <Content>{props.content}</Content>
         <TechList>
           {props.techlist.map(({ tech, href }) => (
