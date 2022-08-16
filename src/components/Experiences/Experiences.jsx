@@ -114,7 +114,12 @@ export function Experiences() {
       <Header>
         <h2 className="red">EXPERIENCE</h2>
       </Header>
-      <motion.div viewport={{ once: true }} variants={container} initial="hidden" whileInView="visible">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <span className="highlight">Responsibility</span>
 
         {jobData.map(({ img, title, place, time, content, href }) => (
@@ -130,11 +135,18 @@ export function Experiences() {
             />
           </motion.div>
         ))}
+      </motion.div>
 
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <span className="highlight">Education</span>
 
         {educationData.map(({ img, place, title, time, content, href }) => (
-          <motion.div viewport={{ once: true }} variants={item}>
+          <motion.div variants={item}>
             <Accordion
               key={title}
               img={img}
@@ -146,11 +158,18 @@ export function Experiences() {
             />
           </motion.div>
         ))}
+      </motion.div>
 
+      <span className="highlight">Certificates</span>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         
-
         <motion.div variants={item}>
-        <span className="highlight">Certificates</span>
+          
           <Gallery />
         </motion.div>
       </motion.div>
