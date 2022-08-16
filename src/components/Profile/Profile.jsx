@@ -13,21 +13,29 @@ export function Profile() {
   const ProfilePic = styled.img`
     width: 400px;
     margin: 20px;
+    @media screen and (max-width: 768px) {
+      
+    max-width: 300px;
+      
+      
+    }
   `;
   
   const Title = styled.div`
     display: flex;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
 
-    div {
-      padding-left: 20px;
-    }
+    
 
     @media screen and (max-width: 768px) {
       
       display: block;
       
-      
+      div {
+      padding-left: 20px;
+    }
     }
   `
 

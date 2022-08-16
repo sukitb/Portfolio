@@ -147,9 +147,10 @@ export function Experiences() {
           </motion.div>
         ))}
 
-        <span className="highlight">Certificates</span>
+        
 
         <motion.div variants={item}>
+        <span className="highlight">Certificates</span>
           <Gallery />
         </motion.div>
       </motion.div>
