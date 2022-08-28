@@ -28,7 +28,7 @@ export function ProjectCard(props) {
   `;
 
   const ProjectDetail = styled.div`
-    background-color: #1B2027;
+    background-color: #1b2027de;
     display: flex;
     flex-direction: column;
     grid-column: 3 / 5;
@@ -49,8 +49,8 @@ export function ProjectCard(props) {
       color: #b9bbb3;
       box-shadow: inset 0 0 0 0 #ff7b72;
       
-      margin: 0 -.25rem;
-      padding: 0 .25rem;
+      
+      
       transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
       
       &:hover {
@@ -97,7 +97,7 @@ export function ProjectCard(props) {
     }
 
     & img {
-      max-width: 100%;
+      max-width: 700px;
     }
   `;
 

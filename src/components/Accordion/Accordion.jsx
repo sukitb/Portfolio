@@ -127,7 +127,7 @@ export function Accordion(props) {
       <Wrapper>
 
       <Header>
-        <h3>{props.title}</h3>
+        <h3>{props.title}</h3>&nbsp;
         <h3>
           <Anchor text={`@` + props.place} blank={true} href={props.href} />
         </h3>

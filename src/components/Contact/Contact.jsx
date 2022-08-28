@@ -15,7 +15,7 @@ export function Contact() {
     {
       text: `Resume`,
       icon: <IoDocumentTextSharp />,
-      link: `https://drive.google.com/file/d/1z9ccyoYtml5n97zwnYj5fV7tPhgWeJJd/view?usp=sharing`,
+      link: `https://drive.google.com/file/d/1wJ0iYHpdUYTV_0vMx3FLyRk8ZCWeoq6T/view?usp=sharing`,
     },
     {
       text: `Email`,

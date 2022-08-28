@@ -3,9 +3,39 @@ import { ProjectCard } from "../ProjectCard/ProjectCard";
 import Jammming from "../../assets/ProjectSS/Jammming/jammming-sukitb.surge 1 (1).png";
 import Colmar from "../../assets/ProjectSS/Colmar-academy/desktop.png";
 import styled from "styled-components";
+import Offit from "../../assets/ProjectSS/Offit/Offit.png"
 
 export function Projects() {
   const projectsData = [
+    {
+      img: Offit,
+      title: `Offit`,
+      content: (
+        <>
+          A web application, built with MERN Stack. That allows users add edit remove exercise activity by using form.
+        </>
+      ),
+      techlist: [
+        {
+          tech: `React`,
+          href: `https://reactjs.org/`,
+        },
+        {
+          tech: `Express`,
+          href: `https://expressjs.com/`,
+        },
+        {
+          tech: `MongoDB`,
+          href: `https://www.mongodb.com/`,
+        },
+        {
+          tech: `Node.js`,
+          href: `https://nodejs.org/en/`,
+        }
+      ],
+      github: `https://github.com/sukitb/Offit_Frontend`,
+      demo: `https://offit.vercel.app/`,
+    },
     {
       img: Jammming,
       title: `Jammming`,
@@ -33,6 +63,7 @@ export function Projects() {
       github: `https://github.com/sukitb/jammming`,
       demo: `https://jammming-sukitb.surge.sh/`,
     },
+    
     {
       img: Colmar,
       title: `COLMAR ACADEMY`,
