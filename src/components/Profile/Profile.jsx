@@ -129,7 +129,7 @@ export function Profile() {
           icon={<IoDocumentTextSharp />}
           blank={true}
           text="RESUME"
-          href="https://drive.google.com/file/d/1z9ccyoYtml5n97zwnYj5fV7tPhgWeJJd/view?usp=sharing"
+          href="https://drive.google.com/file/d/1wJ0iYHpdUYTV_0vMx3FLyRk8ZCWeoq6T/view?usp=sharing"
         />
         
       </motion.div>
