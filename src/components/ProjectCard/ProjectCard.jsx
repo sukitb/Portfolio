@@ -91,13 +91,17 @@ export function ProjectCard(props) {
     grid-column: 1 / 4;
     grid-row: 1 / 4;
 
+    img {
+      width: 700px;
+    }
+
     @media only screen and (max-width: 768px) {
       grid-column: 1/5;
       grid-row: 1/3;
     }
 
     & img {
-      max-width: 700px;
+      max-width: 100%;
     }
   `;
 
